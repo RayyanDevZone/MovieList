@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,200&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://asset-a.grid.id/photo/makemac/2017/03/netfix-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:transparent
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-container {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bolder;
+  color: aliceblue;
+}
+h1{
+  color: aliceblue;
+  text-align: center;
+}
+.title {
+  font-weight: bolder;
+  font-size: 16px;
+}
+.year,
+.duration {
+  margin-right: 10px;
+}
+
+#btn {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .movie-container img {
+    width: 150px;
+    height: 225px;
+  }
+
+  .movie-details {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .movie-container img {
+    width: 120px;
+    height: 180px;
+  }
+
+  .movie-details {
+    font-size: 12px;
   }
 }
